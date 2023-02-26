@@ -64,7 +64,7 @@ int get_good_label(vector<Interval> v, vector<int> labels, int current_interval)
     vector<bool> possible_labels(n, true);
     for (int i = 0; i < current_interval; i++)
         if (!isCompatible(v[i], v[current_interval]))
-            possible_labels[labels[i]] = false;
+            possible_labels[labels[i]] = possible_labels[labels[i]] && false;
 
     for (int i = 0; i < n; i++)
         if (possible_labels[i])
@@ -78,7 +78,6 @@ vector<int> schedule_resources(vector<Interval> &intervals)
 
     int n = intervals.size();
     vector<int> labels(n, -1);
-    int curr_label;
 
     sort(intervals.begin(), intervals.end(), interval_compare);
 
