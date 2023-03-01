@@ -57,9 +57,6 @@ void display(vector<Interval> intervals, vector<int> labels)
 int get_good_label(vector<Interval> v, vector<int> labels, int current_interval)
 {
     int n = v.size();
-    vector<bool> compatibles;
-    for (int i = 0; i < current_interval; i++)
-        compatibles.push_back(isCompatible(v[i], v[current_interval]));
 
     vector<bool> possible_labels(n, true);
     for (int i = 0; i < current_interval; i++)
