@@ -46,9 +46,12 @@ void schedule_intervals(vector<Interval> schedules)
 int main()
 {
     int n;
+    cout << "Enter number of intervals" << endl;
     cin >> n;
+
     vector<Interval> schedules(n);
 
+    cout << "Enter starting times and their finishing times" << endl;
     int x, y;
     for (auto &&interval : schedules)
     {

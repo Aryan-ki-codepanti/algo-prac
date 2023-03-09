@@ -79,12 +79,14 @@ int main()
 {
 
     int n;
+    cout << "Enter number of intervals" << endl;
     cin >> n;
 
     vector<Interval> intervals(n);
     vector<int> labels;
 
     int x, y;
+    cout << "Enter starting times and their finishing times" << endl;
     for (auto &&interval : intervals)
     {
         cin >> x >> y;
