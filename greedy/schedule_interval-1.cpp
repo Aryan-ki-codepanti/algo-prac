@@ -14,12 +14,6 @@ public:
     }
 };
 
-void display(vector<Interval> schedules)
-{
-    for (int i = 0; i < schedules.size(); i++)
-        cout << schedules[i].start_time << " " << schedules[i].end_time << endl;
-}
-
 bool interval_comparator(Interval a, Interval b)
 {
     return a.end_time <= b.end_time;
@@ -29,7 +23,6 @@ void schedule_intervals(vector<Interval> schedules)
 {
     int n = schedules.size();
     sort(schedules.begin(), schedules.end(), interval_comparator);
-    display(schedules);
 
     vector<bool> schedule(n, false);
 

@@ -28,14 +28,6 @@ bool isCompatible(Interval a, Interval b)
     return false;
 }
 
-void display(vector<Interval> v)
-{
-
-    for (auto &i : v)
-        cout << i.start_time << " " << i.end_time << "\t";
-    cout << endl;
-}
-
 void display(vector<Interval> intervals, vector<int> labels)
 {
 
@@ -98,13 +90,6 @@ int main()
         cin >> x >> y;
         interval = Interval(x, y);
     }
-
-    // Interval i1 = Interval(6, 11);
-    // Interval i2 = Interval(7, 12);
-    // Interval i3 = Interval(12, 15);
-    // cout << isCompatible(i1, i2) << endl;
-    // cout << isCompatible(i1, i3) << endl;
-    // cout << isCompatible(i2, i3) << endl;
 
     labels = schedule_resources(intervals);
 
